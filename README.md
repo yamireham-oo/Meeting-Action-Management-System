@@ -9,7 +9,7 @@ An Excel tracker that classifies meeting actions automatically and shows what ne
 
 <img width="1058" height="320" alt="Screenshot 2026-11-21 152111" src="https://github.com/user-attachments/assets/b74fb296-70c0-4ba1-8f02-d1b85dd015a3" />
 
-[Download the workbook](Meeting-Action-System.xlsx)
+[Download the workbook](Meeting-Action-Management-System.xlsx)
 
 What it does
 
@@ -32,7 +32,8 @@ Action Health labels each action as Completed, Not Known, Overdue, Due Soon (wit
 
 Follow-up Urgency flags actions as Urgent, Check or Not Urgent.
 
-```excel
+```excel:
+
 =IFS([@Status]="Completed","Completed",
      OR([@[Action Health]]="Due Soon",[@[Action Health]]="Overdue"),"Urgent",
      OR([@[Last Follow-up]]="",[@[Action Health]]="Not Known"),"Check",
